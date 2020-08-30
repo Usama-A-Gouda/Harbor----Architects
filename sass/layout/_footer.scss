@@ -1,0 +1,110 @@
+.footer {
+  
+    background-color: $color-primary;
+    grid-column: full-start/full-end;
+    grid-row: 7/8;
+    padding: 5px; 
+    margin-top: 10rem;
+
+    .nav {
+        list-style: none;
+        display: grid;
+        grid-gap: 2rem;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit , minmax(15rem,1fr)); 
+        //grid-template-rows: repeat(2 , 1fr);;
+
+        &__link {
+            &:link,&:visited {
+                border-bottom:2px solid $color-black;
+
+                color: $color-white;
+                font-size: 1.7rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 1.5rem;
+                display: block;
+                border-radius: 2px;
+                //background-color: rgba($color-black,0.4);  
+                transition: all 0.5s;
+
+                &:hover , &:active{
+                    background-color: rgba($color-white,0.8);
+                    color: $color-black;
+                    transform: translateY(-3px) rotate(-1deg); 
+                }              
+            }
+        }
+    }
+    .find-us {
+        display: grid;
+        //grid-gap: 2rem; 
+        margin: 0 auto;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(4 , minmax(min-content,1fr)); 
+        grid-template-rows: repeat(2,1fr);
+        .footer__head {
+            font-size: 3rem;
+            font-family: $display-font-2;
+            color: $color-black; 
+            text-shadow: 0 0rem 3rem rgba(orangered,0.5); 
+            text-transform: uppercase;;
+            //justify-self: center;
+            font-style: italic;
+            text-align: center;
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            border-left:5px solid rgba(orangered,0.9);
+            border-radius: 30rem;
+            
+            padding-left: 1rem;
+            transition: all 0.4s;
+           
+          
+            // &::before,&::after {
+            //     content: "";
+            //     display: block;
+            //     background-color: hotpink;
+            //     height: 3px;
+                
+            // }
+            // &::before {
+      
+            //     grid-column: 1/2;
+            // }
+         
+            &:hover {
+                text-shadow: 0 0rem 3rem rgba($color-white,0.9); 
+ 
+            }
+        }
+        .link {
+            height: 4rem;
+            width: 4rem;
+            .icon {
+                height: 4rem;
+                width: 4rem;
+                fill: $color-grey-dark-2;
+                transition: all 0.5s;
+                backface-visibility: hidden;
+
+                &:hover {
+                    fill:red;
+                    transform: scale(1.2);
+                }
+            }
+        }
+       
+    } 
+    &__copyright {
+        margin-top: -3rem;
+        color:grey;
+        font-size: 2rem;
+        text-align: center; 
+    }
+
+}

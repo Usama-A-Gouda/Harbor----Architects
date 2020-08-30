@@ -1,0 +1,22 @@
+.container {
+    font-family:$display-font;
+
+    
+    display: grid;
+    grid-template-rows: 5rem 85vh repeat(5,min-content) ;
+    grid-row-gap: 3rem;
+    grid-template-columns: [full-start] 1fr [center-start] repeat(8 ,[col-start] minmax(min-content,14rem)[col-end]) [center-end] 1fr [full-end];
+    
+    @include respond(small-phone-v2) {
+         grid-template-rows: 5rem 85vh repeat(5,min-content) ;
+         grid-row-gap: 1rem;
+   
+    }
+    & > * {
+        //font-size: 2rem;
+        padding: 4rem;
+
+    }
+   
+}
+

@@ -1,0 +1,24 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        background-color:$color-black;
+        width: 20rem;
+        padding: 2rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+        transition: all 0.4s;
+     
+}
+    &:hover{ 
+        background-color:$color-white ;
+        color: black;
+        width: 22rem;
+    }
+
+}

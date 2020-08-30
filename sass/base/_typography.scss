@@ -1,0 +1,39 @@
+.heading-1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    transition: all 0.4s;
+    backface-visibility: hidden;
+    text-shadow: 0 1rem 2rem $color-black;
+    &:hover {
+        letter-spacing: 1.5px;
+        text-shadow: 0 .5rem 2rem $color-white;
+        color: $color-primary;
+
+        
+    }
+    &--light {
+        color: $color-white;
+        
+    }
+    &--dark {
+        color: $color-primary-dark;
+    }
+
+}
+
+.heading-4 {
+    font-family: $display-font; 
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-align: center;
+    &--light {
+        color: $color-white;
+        
+    }
+    &--dark {
+        color: $color-primary-dark;
+    }
+
+}

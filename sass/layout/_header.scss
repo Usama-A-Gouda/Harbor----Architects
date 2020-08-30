@@ -1,0 +1,103 @@
+.header {
+
+    
+    background-image:linear-gradient(104deg , rgba($color-white,0.4) 0% , rgba($color-primary-dark,0.4)55%,transparent 55%), url(/img/bg.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    grid-row: 2/3; 
+    grid-column: full-start / full-end; 
+    display:grid; 
+    grid-template-columns:repeat(8,1fr) ;
+    grid-template-rows: min-content;
+    font-family: $header-font;
+    align-content: center; 
+    animation: light 2s ease-out;  
+  
+    @include respond(tab-port) {
+        background-image:linear-gradient(90deg , rgba($color-white,0.4) 0% , rgba($color-primary-dark,0.4)60%,transparent 60%), url(/img/bg.jpg);
+
+    }
+    @include respond (phone) {
+        background-image:linear-gradient(90deg , rgba($color-white,0.4) 0% , rgba($color-primary-dark,0.4)100%,transparent 100%), url(/img/bg.jpg);
+
+    }
+    @include respond (small-phone){
+        background-image:url(/img/bg.jpg);
+
+        
+    }
+    @include respond (small-phone-v2){
+        background-image:url(/img/bg.jpg);
+  
+
+    }
+    &__info {
+        
+        grid-column:1/6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;  
+        animation: moveInBottom 2s;
+        z-index: 3;
+        @include respond (phone) {
+            grid-column:1/-1;
+
+        }
+        & > * {
+            
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+            }
+        }
+        @include respond (small-phone-v2){
+            text-align: center;
+
+        }
+
+       
+ 
+    }
+    &__text {
+        font-size: 2rem;
+        text-transform: uppercase; 
+        background-color: rgba($color-white,0.5);
+        margin-left: 10rem;
+        @include respond(tab-port) { 
+            margin-left: -2rem; 
+        }
+    }
+    // &__info::before {
+    //     display: block;
+    //     content: "";
+    //     position: absolute;
+    //     left: 4rem;
+    //     height: 30%;
+    //     background-color: rgba($color-primary-dark,0.4);
+    //     width: 3px;
+        
+    //     backface-visibility: hidden;
+
+    //     transition: all 0.4s;
+
+        
+      
+    // }
+    
+    &--btn {
+        margin-top: 2rem;
+        box-shadow: 0rem 0rem 0.5rem black;
+        background-color: transparent !important;
+        &:hover {
+            background-color: $color-white !important;
+        }
+    }
+    // &__info:hover::before {
+    //     //width: 50%;  
+    // }
+
+
+}
+

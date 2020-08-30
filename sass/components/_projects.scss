@@ -1,0 +1,98 @@
+.projects {
+    grid-column: full-start/full-end;
+    grid-row: 6/7;
+    // grid-template-rows: repeat(2,min-content);
+    // grid-row-gap: 10rem;
+    //background-color:$color-black ;
+    .project {
+        
+        padding-bottom: 1rem;
+        display: grid;
+ 
+        &:hover > .project__img { 
+             filter:blur(1px) brightness(50%) ; 
+              
+        } 
+        &:hover > .project__content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0rem); 
+                
+        }
+        &__img{
+            box-shadow: 1rem 0 2rem rgba($color-black,0.2);
+            border-radius: 2rem;
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            width: 90vw;  
+            height: 70vh;   
+            transition: all 0.7s;
+            // &:hover + .project__content  {
+            //     opacity: 1;
+            //     visibility: visible;
+            //     transform: translateY(0rem);
+                
+         
+    
+            // }
+           
+            @include respond(tab-land) {
+                filter:brightness(50%) ;
+            }
+              
+        }
+        &__content {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10rem);  
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            //z-index: 5;   
+            justify-self: start;
+            align-self: center;
+            text-align: center;
+            color: $color-white;
+            padding: 5rem;
+            transition: all 0.7s;
+            @include respond(tab-land) {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0rem);  
+            }
+            &--2 {
+                justify-self: end;
+     
+            }
+            & > * {
+                margin-bottom: 4rem;
+            }
+            // &:hover {
+            //     opacity: 1;
+            //     visibility: visible;
+            //     transform: translateY(0rem);
+            // }
+            .project__header { 
+                font-size: 3rem; 
+                text-transform: uppercase;
+                font-family: $header-font;
+            }
+            .project__text { 
+                font-size: 2rem;
+                font-family: $display-font-2;
+                
+            }
+            .project__btn {
+                background-color: transparent;
+                border:1px solid $color-black;  
+                box-shadow: 0 1rem 2rem $color-black;
+                display: block;
+                width: 20rem; 
+                margin: 0 auto ;    
+                &:hover {
+                    background-color: $color-white;
+                } 
+
+            }
+        }
+    }
+}
